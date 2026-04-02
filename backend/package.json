@@ -12,6 +12,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@google/genai": "^1.48.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1"
   }
