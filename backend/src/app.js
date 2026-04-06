@@ -4,7 +4,15 @@ import cors from "cors";
 
 export const app = express();
 
-app.use(cors());
+//configuration to resolve cross origin problem
+app.use(
+  cors({
+    origin: "*",
+    Credential: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    allowedHeaders: ["content-type", "Authorization"],
+  }),
+);
 
 app.use(express.json());
 
