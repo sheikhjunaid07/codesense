@@ -19,14 +19,20 @@ function App() {
   const [code, setCode] = useState(` function sum() {\n  return 1 + 1\n}`);
 
   async function reviewCode() {
-    const response = await axios.post("http://localhost:8080/ai/get-review", {
-      code,
-    });
+    const response = await axios.post(
+      "https://code-reviewer-gzgu.onrender.com/ai/get-review",
+      {
+        code,
+      },
+    );
     setReview(response.data);
   }
 
   return (
-    <>
+    <div className="app-wrapper">
+      <header className="navbar">
+        <span className="logo">CodeSense</span>
+      </header>
       <main>
         <div className="left">
           <div className="code">
@@ -40,6 +46,7 @@ function App() {
                 fontSize: 16,
                 minHeight: "100%",
                 width: "100%",
+                color: "#abb2bf",
               }}
             />
           </div>
@@ -51,7 +58,7 @@ function App() {
           <Markdown rehypePlugins={[rehypeHighlight]}>{review}</Markdown>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 
