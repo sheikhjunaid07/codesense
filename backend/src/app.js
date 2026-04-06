@@ -7,7 +7,7 @@ export const app = express();
 //configuration to resolve cross origin problem
 app.use(
   cors({
-    origin: "*",
+    origin: "https://codesense-pink.vercel.app/",
     Credential: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["content-type", "Authorization"],
