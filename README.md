@@ -117,7 +117,3 @@ Submits code for review.
 **Backend** is deployed on Render. Make sure to set the `GEMINI_API_KEY` environment variable in your Render service settings.
 
 ---
-
-## License
-
-MIT
